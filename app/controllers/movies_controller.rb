@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     render json: movie
   end
 
-  def delete
+  def destroy
     movie.destroy!
     render :success
   end
