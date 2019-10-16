@@ -1,13 +1,27 @@
 module Types
   class QueryType < Types::BaseObject
-    # Add root-level fields here.
-    # They will be entry points for queries on your schema.
+    field :movies, [Types::MovieType], null: false, description: 'Shows all the movies'
+    def movies
+      Movie.all
+    end
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :movie, Types::MovieType, null: true do
+      argument :id, Integer, required: true
+    end
+    def movie(id:)
+      Movie.find(id)
+    end
+
+    field :actors, [Types::ActorType], null: false, description: 'Shows all the actors.'
+    def actors
+      Actor.all
+    end
+
+    field :actor, Types::ActorType, null: true do
+      argument :id, Integer, required: true
+    end
+    def actor(id:)
+      Actor.find(id)
     end
   end
 end
