@@ -1,3 +1,8 @@
+# Clean data
+Movie.destroy_all
+Character.destroy_all
+Actor.destroy_all
+
 # Create movies
 lotr = Movie.create(
   title: 'Lord of the Rings',
