@@ -32,3 +32,6 @@ You can now access the app at `http://localhost:3000/`.
 ### Running tests
 
 This is app rouge and has no tests. Be afraid.
+
+### Presentation link of the ruby Unconference
+https://docs.google.com/presentation/d/1Z8dpTlSmnX4dhILB0gLhz5EYXl5JW6UlMwy9G8IFyvw/edit?usp=sharing
